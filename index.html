@@ -7,16 +7,16 @@
 </head>
 <body>
     <h1>Azure Static Web App with Azure Function</h1>
-    <!-- <button onclick="callFunction()">updated Call Azure Function</button>
+    <button onclick="callFunction()">updated Call Azure Function</button>
     <p id="response"></p>
 
     <script>
         async function callFunction() {
-            const response = await fetch("https://devafunction.azurewebsites.net/api/HttpTrigger1");
+            const response = await fetch("https://devafunction.azurewebsites.net/api/HttpTrigger1?name=Alekhyaa");
             const data = await response.text();
             document.getElementById("response").innerText = data;
         }
-    </script> -->
+    </script>
     <!-- <button onclick="callFunction()">Call Azure Function</button>
 
 <script>
@@ -36,7 +36,7 @@ async function callFunction() {
     }
 }
 </script> -->
-<button onclick="callAzureFunction()">Call Azure Function</button>
+<!-- <button onclick="callAzureFunction()">Call Azure Function</button>
 
 <script>
 async function callAzureFunction() {
@@ -60,7 +60,7 @@ async function callAzureFunction() {
         alert("Failed to call Azure Function.");
     }
 }
-</script>
+</script> -->
 
 
 </body>
