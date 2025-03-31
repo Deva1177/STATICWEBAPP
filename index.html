@@ -17,7 +17,7 @@
             document.getElementById("response").innerText = data;
         }
     </script> -->
-    <button onclick="callFunction()">Call Azure Function</button>
+    <!-- <button onclick="callFunction()">Call Azure Function</button>
 
 <script>
 async function callFunction() {
@@ -35,7 +35,32 @@ async function callFunction() {
         alert("Failed to call Azure Function.");
     }
 }
+</script> -->
+<button onclick="callAzureFunction()">Call Azure Function</button>
+
+<script>
+async function callAzureFunction() {
+    try {
+        const response = await fetch("https://<TCMISTATICWEBAPP>.azurewebsites.net/api/DevaFunction/HttpTrigger1?name=Deva", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: "John" })
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.text();
+        console.log("Function Response:", data);
+        alert(data);
+    } catch (error) {
+        console.error("Error calling Azure Function:", error);
+        alert("Failed to call Azure Function.");
+    }
+}
 </script>
+
 
 </body>
 </html>
