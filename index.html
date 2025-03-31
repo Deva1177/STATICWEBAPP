@@ -22,7 +22,7 @@
 <script>
 async function callFunction() {
     try {
-        const response = await fetch("https://<TCMISTATICWEBAPP>.azurewebsites.net/api/DevaFunction", {
+        const response = await fetch("https://<TCMISTATICWEBAPP>.azurewebsites.net/api/DevaFunction/HttpTrigger1", {
             method: "GET",
             headers: { "Content-Type": "application/json" },
         });
