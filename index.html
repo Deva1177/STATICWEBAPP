@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Azure Static Web App with Azure Function</h1>
-    <button onclick="callFunction()">updated Call Azure Function</button>
+    <!-- <button onclick="callFunction()">updated Call Azure Function</button>
     <p id="response"></p>
 
     <script>
@@ -16,6 +16,26 @@
             const data = await response.text();
             document.getElementById("response").innerText = data;
         }
-    </script>
+    </script> -->
+    <button onclick="callFunction()">Call Azure Function</button>
+
+<script>
+async function callFunction() {
+    try {
+        const response = await fetch("https://<your-static-web-app>.azurewebsites.net/api/your-function-name", {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+        });
+
+        const data = await response.json();
+        console.log("Function Response:", data);
+        alert("Response from Azure Function: " + JSON.stringify(data));
+    } catch (error) {
+        console.error("Error calling function:", error);
+        alert("Failed to call Azure Function.");
+    }
+}
+</script>
+
 </body>
 </html>
