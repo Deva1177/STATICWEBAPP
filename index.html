@@ -41,7 +41,7 @@ async function callFunction() {
 <script>
 async function callAzureFunction() {
     try {
-        const response = await fetch("https://<TCMISTATICWEBAPP>.azurewebsites.net/api/DevaFunction/HttpTrigger1?name=Deva", {
+        const response = await fetch("http://<TCMISTATICWEBAPP>.azurewebsites.net/api/DevaFunction/HttpTrigger1?name=Deva", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name: "John" })
