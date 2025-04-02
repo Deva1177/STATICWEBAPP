@@ -17,51 +17,6 @@
             document.getElementById("response").innerText = data;
         }
     </script>
-    <!-- <button onclick="callFunction()">Call Azure Function</button>
-
-<script>
-async function callFunction() {
-    try {
-        const response = await fetch("https://<TCMISTATICWEBAPP>.azurewebsites.net/api/DevaFunction/HttpTrigger1?name=Deva", {
-            method: "GET",
-            headers: { "Content-Type": "application/json" },
-        });
-
-        const data = await response.json();
-        console.log("Function Response:", data);
-        alert("Response from Azure Function: " + JSON.stringify(data));
-    } catch (error) {
-        console.error("Error calling function:", error);
-        alert("Failed to call Azure Function.");
-    }
-}
-</script> -->
-<!-- <button onclick="callAzureFunction()">Call Azure Function</button>
-
-<script>
-async function callAzureFunction() {
-    try {//https://yellow-water-00bd4820f.6.azurestaticapps.net
-        //http://<TCMISTATICWEBAPP>.azurewebsites.net/api/DevaFunction/HttpTrigger1?name=Deva
-        const response = await fetch("http://<yellow-water-00bd4820f.6>.azurewebsites.net/api/DevaFunction/HttpTrigger1?name=Deva", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name: "John" })
-        });
-
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-
-        const data = await response.text();
-        console.log("Function Response:", data);
-        alert(data);
-    } catch (error) {
-        console.error("Error calling Azure Function:", error);
-        alert("Failed to call Azure Function.");
-    }
-}
-</script> -->
-
 
 </body>
 </html>
